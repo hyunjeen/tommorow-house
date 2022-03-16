@@ -1,6 +1,8 @@
-@import 'base/constants/colors';
-@import './base/constants/typography';
+@import './constants/colors';
+@import './constants/typography';
 
 @import './base/fonts';
 @import './base/nomalize';
 @import './base/reset';
+
+@import './layouts/grids';
