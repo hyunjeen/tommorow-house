@@ -6,7 +6,9 @@
 @import './base/nomalize';
 @import './base/reset';
 
-@import './mixins/positions';
+
 @import './mixins/responsive';
 @import './mixins/text-style';
+@import './mixins/positions';
+@import './mixins/flexbox';
 @import './layouts/grids';
