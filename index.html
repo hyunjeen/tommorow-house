@@ -77,12 +77,12 @@
 
                 <div class="my-menu sm-hidden">
                   <button class="my-menu-button" type="button" aria-label="My menu open">
-                    
-                      <img src="./assets/images/img-user-01.jpg" alt="user profile">
-                    
+
+                    <img src="./assets/images/img-user-01.jpg" alt="user profile">
+
                   </button>
 
-                  <div class="my-menu-content"> 
+                  <div class="my-menu-content">
                     <ul class="my-menu-list">
                       <li class="my-menu-item"><a href="#">마이페이지</a></li>
                       <li class="my-menu-item"><a href="#">나의 쇼핑</a></li>
@@ -123,7 +123,67 @@
       </div>
     </div>
   </header>
-  
+
+  <aside class="sidebar sm-only">
+    <header class="sidebar-header">
+      <h1 class="logo">
+        <a href=""><img src="./assets/images/Logo.svg" alt="내일의집"></a>
+      </h1>
+      <!-- 로그인을 한경우 -->
+      <div class="sidebar-user">
+        <a href="javascript:void(0)">
+          <div class="avatar-24">
+            <img src="./assets/images/img-user-01.jpg" alt="user profile">
+          </div>
+          <strong class="username">사달라</strong>
+        </a>
+      </div>
+      <!-- 로그인을 하지않은경우 -->
+      <div class="sidebar-auth">
+        <a class="btn-outlined btn-40" href="javascript:void(0)">로그인</a>
+        <a class="btn-primary btn-40" href="javascript:void(0)">회원가입</a>
+      </div>
+    </header>
+
+    <nav class="sidebar-nav">
+      <h2 class="visually-hidden">메뉴</h2>
+      <div class="drawer-menu">
+        <button class="drawer-menu-button"type="button">
+          <i class="ic-store" aria-hidden=""></i>
+          스토어
+          <i class="ic-chevron" aria-hidden=""></i>
+        </button> 
+        <div class="drawer-menu-content">
+          <ul class="drawer-menu-list">
+            <li class="drawer-menu-item">
+              <a href="javascript:void(0)">스토어</a>
+            </li>
+            <li class="drawer-menu-item">
+              <a href="javascript:void(0)">카테고리</a>
+            </li>
+            <li class="drawer-menu-item">
+              <a href="javascript:void(0)">신혼가구</a>
+            </li>
+            <li class="drawer-menu-item">
+              <a href="javascript:void(0)">기획전
+                <i class="ic-new" lang="en" aria-label="New"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 로그인을 한 경우 -->
+      <div class="user-menu">
+        <ul class="user-menu-list">
+          <li class="user-menu-item"><a href="javascript:void(0)">마이페이지</a></li>
+          <li class="user-menu-item"><a href="javascript:void(0)">나의 쇼핑</a></li>
+          <li class="user-menu-item"><a href="javascript:void(0)">스크랩북</a></li>
+          <li class="user-menu-item"><a href="javascript:void(0)">알림</a></li>
+          <li class="user-menu-item"><a href="javascript:void(0)">이벤트</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
 </body>
 
 </html>
