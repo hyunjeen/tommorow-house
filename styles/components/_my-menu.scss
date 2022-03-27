@@ -6,8 +6,13 @@
         height: 32px;
         border-radius: 50%;
         overflow: hidden;
+        background-image: url('./assets/images/img-user-default.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
         border: 3px solid $white;
         transition: border-color 200ms ease-in-out;
+
 
         img {
             display: block;
