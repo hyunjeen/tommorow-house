@@ -1,77 +1,77 @@
 i {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'tommorrow' !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'tommorrow' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .ic-bell:before {
-    content: "\e900";
+	content: "\e900";
 }
 
 .ic-bookmark:before {
-    content: "\e901";
+	content: "\e901";
 }
 
 .ic-bookmark-filled:before {
-    content: "\e902";
+	content: "\e902";
 }
 
 .ic-caret:before {
-    content: "\e903";
+	content: "\e903";
 }
 
 .ic-cart:before {
-    content: "\e904";
+	content: "\e904";
 }
 
 .ic-check:before {
-    content: "\e905";
+	content: "\e905";
 }
 
 .ic-chevron:before {
-    content: "\e906";
+	content: "\e906";
 }
 
 .ic-close:before {
-    content: "\e907";
+	content: "\e907";
 }
 
 .ic-expert:before {
-    content: "\e908";
+	content: "\e908";
 }
 
 .ic-lock:before {
-    content: "\e909";
+	content: "\e909";
 }
 
 .ic-menu:before {
-    content: "\e90a";
+	content: "\e90a";
 }
 
 .ic-new:before {
-    content: "\e90b";
+	content: "\e90b";
 }
 
 .ic-search:before {
-    content: "\e90c";
+	content: "\e90c";
 }
 
 .ic-star:before {
-    content: "\e90d";
+	content: "\e90d";
 }
 
 .ic-store:before {
-    content: "\e90e";
+	content: "\e90e";
 }
 
 .ic-cogs:before {
-    content: "\e995";
+	content: "\e995";
 }

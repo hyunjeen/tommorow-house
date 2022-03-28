@@ -1,103 +1,103 @@
 .gnb {
-    position: relative;
-    border-bottom: 1px solid $border;
+	position: relative;
+	border-bottom: 1px solid $border;
 
-    &-wrapper {
-        @include flexbox(between);
-        height: 50px
-    }
+	&-wrapper {
+		@include flexbox(between);
+		height: 50px
+	}
 
-    &-right {
+	&-right {
 
-        .button-group {
-            @include flexbox;
-        }
+		.button-group {
+			@include flexbox;
+		}
 
-        .gnb-icon-button.is-search {
-            margin-right: 4px;
-        }
-    }
+		.gnb-icon-button.is-search {
+			margin-right: 4px;
+		}
+	}
 
 
-    .logo {
-        @include pos-center;
+	.logo {
+		@include pos-center;
 
-        a {
-            display: block;
-        }
+		a {
+			display: block;
+		}
 
-        img {
-            display: block;
-            width: auto;
-            height: 20px;
-        }
-    }
+		img {
+			display: block;
+			width: auto;
+			height: 20px;
+		}
+	}
 
-    @include responsive(T) {
-        &-left {
-            @include flexbox(start)
-        }
+	@include responsive(T) {
+		&-left {
+			@include flexbox(start)
+		}
 
-        &-right {
-            @include flexbox(end);
+		&-right {
+			@include flexbox(end);
 
-            .button-group {
-                margin-right: 24px;
+			.button-group {
+				margin-right: 24px;
 
-                .gnb-icon-button {
-                    margin-right: 8px;
-                }
-            }
-        }
+				.gnb-icon-button {
+					margin-right: 8px;
+				}
+			}
+		}
 
-        .gnb-auth {
-            margin-left: 8px;
+		.gnb-auth {
+			margin-left: 8px;
 
-            a {
-                @include text-style(14, $secondary);
-                font-weight: 700;
+			a {
+				@include text-style(14, $secondary);
+				font-weight: 700;
 
-                &:first-child {
-                    margin-right: 12px;
-                }
+				&:first-child {
+					margin-right: 12px;
+				}
 
-                &:hover {
-                    color: $blue;
-                }
+				&:hover {
+					color: $blue;
+				}
 
-            }
-        }
+			}
+		}
 
-        &-wrapper {
-            height: 80px;
-        }
+		&-wrapper {
+			height: 80px;
+		}
 
-        .logo {
-            position: static;
-            transform: none;
-            margin-right: 32px;
+		.logo {
+			position: static;
+			transform: none;
+			margin-right: 32px;
 
-            img {
-                height: 24px;
-            }
-        }
+			img {
+				height: 24px;
+			}
+		}
 
-        .btn-primary {
-            width: 88px;
+		.btn-primary {
+			width: 88px;
 
-            i {
-                margin-left: 4px;
-            }
-        }
+			i {
+				margin-left: 4px;
+			}
+		}
 
-    }
+	}
 
-    @include responsive(D) {
-        &-right {
-            .input-group {
-                width: 264px;
-                margin-right: 24px;
-            }
-        }
-    }
+	@include responsive(D) {
+		&-right {
+			.input-group {
+				width: 264px;
+				margin-right: 24px;
+			}
+		}
+	}
 }

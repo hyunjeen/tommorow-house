@@ -1,29 +1,29 @@
 %avarta-base {
-    display: block;
-    overflow: hidden;
-    border-radius: 50%;
-    background-image: url('./assets/images/img-user-default.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
+	display: block;
+	overflow: hidden;
+	border-radius: 50%;
+	background-image: url('./assets/images/img-user-default.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
 
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 
 .avatar-24 {
-    @extend %avarta-base;
-    width: 24px;
-    height: 24px;
+	@extend %avarta-base;
+	width: 24px;
+	height: 24px;
 }
 
 .avatar-32 {
-    @extend %avarta-base;
-    width: 32px;
-    height: 32px;
+	@extend %avarta-base;
+	width: 32px;
+	height: 32px;
 
 }

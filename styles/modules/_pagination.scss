@@ -1,74 +1,74 @@
 %page-item-base {
-    @include inline-flexbox;
-    @include text-style(16, $primary);
-    height: 26px;
-    font-weight: 700;
-    background-color: $white;
-    border-radius: 4px;
+	@include inline-flexbox;
+	@include text-style(16, $primary);
+	height: 26px;
+	font-weight: 700;
+	background-color: $white;
+	border-radius: 4px;
 
 }
 
 .pagination {
-    @include flexbox;
+	@include flexbox;
 
-    .page-control {
+	.page-control {
 
-        @extend %page-item-base;
-        border: 1px solid $border;
-        width: 26px;
+		@extend %page-item-base;
+		border: 1px solid $border;
+		width: 26px;
 
 
-        &.page-prev {
-            margin-right: 24px;
+		&.page-prev {
+			margin-right: 24px;
 
-            .ic-chevron {
-                transform: rotate(90deg);
-            }
-        }
+			.ic-chevron {
+				transform: rotate(90deg);
+			}
+		}
 
-        &.page-next {
-            margin-left: 24px;
+		&.page-next {
+			margin-left: 24px;
 
-            .ic-chevron {
-                transform: rotate(-90deg);
-            }
-        }
+			.ic-chevron {
+				transform: rotate(-90deg);
+			}
+		}
 
-        .ic-chevron {
-            font-size: 20px;
-        }
+		.ic-chevron {
+			font-size: 20px;
+		}
 
-        &:hover {
-            opacity: 0.4;
-        }
-    }
+		&:hover {
+			opacity: 0.4;
+		}
+	}
 
-    .page-list {
-        @include flexbox;
+	.page-list {
+		@include flexbox;
 
-        .page-item {
-            margin-right: 4px;
+		.page-item {
+			margin-right: 4px;
 
-            a {
-                @extend %page-item-base;
-                min-width: 26px;
-                padding: 0 4px;
+			a {
+				@extend %page-item-base;
+				min-width: 26px;
+				padding: 0 4px;
 
-                &:hover {
-                    color: $blue;
-                }
-            }
+				&:hover {
+					color: $blue;
+				}
+			}
 
-            &.is-active {
-                a {
-                    background-color: $blue;
-                    color: $white;
-                }
-            }
+			&.is-active {
+				a {
+					background-color: $blue;
+					color: $white;
+				}
+			}
 
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
 }

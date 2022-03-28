@@ -1,88 +1,88 @@
 .my-menu {
-    position: relative;
+	position: relative;
 
-    &-button {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        overflow: hidden;
-        background-image: url('./assets/images/img-user-default.png');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        border: 3px solid $white;
-        transition: border-color 200ms ease-in-out;
-
-
-        img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-        }
-
-        &:hover,
-        &.is-active {
-            border-color: $blue
-        }
-    }
+	&-button {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		overflow: hidden;
+		background-image: url('./assets/images/img-user-default.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		border: 3px solid $white;
+		transition: border-color 200ms ease-in-out;
 
 
-    &-content {
-        @include pos-center-x;
-        top: 50px;
-        border-radius: 4px;
-        box-shadow: $dropdown-shadow;
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+		}
+
+		&:hover,
+		&.is-active {
+			border-color: $blue
+		}
+	}
 
 
-        &::before,
-        &::after {
-            @include pos-center-x;
-            top: -25px;
-            display: block;
-            content: '';
-            width: 0;
-            height: 0;
-            border-top: 13px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 13px solid $black;
-            border-left: 10px solid transparent;
-        }
+	&-content {
+		@include pos-center-x;
+		top: 50px;
+		border-radius: 4px;
+		box-shadow: $dropdown-shadow;
 
-        &::after {
-            top: -23px;
-            border-bottom-color: $white;
-        }
 
-        &::before {
-            border-bottom-color: $border;
-        }
-    }
+		&::before,
+		&::after {
+			@include pos-center-x;
+			top: -25px;
+			display: block;
+			content: '';
+			width: 0;
+			height: 0;
+			border-top: 13px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 13px solid $black;
+			border-left: 10px solid transparent;
+		}
 
-    &-list {
-        top: 20px;
-        width: 200px;
-        padding: 8px;
-        background-color: $white;
-        border-radius: 4px;
-        border: 1px solid $border;
-    }
+		&::after {
+			top: -23px;
+			border-bottom-color: $white;
+		}
 
-    &-item {
+		&::before {
+			border-bottom-color: $border;
+		}
+	}
 
-        a,
-        button {
-            @include flexbox(start);
-            @include text-style(16, $primary);
-            width: 100%;
-            height: 44px;
-            padding: 0 8px;
-            border-radius: 2px;
+	&-list {
+		top: 20px;
+		width: 200px;
+		padding: 8px;
+		background-color: $white;
+		border-radius: 4px;
+		border: 1px solid $border;
+	}
 
-            &:hover {
-                background-color: $background;
-            }
-        }
-    }
+	&-item {
+
+		a,
+		button {
+			@include flexbox(start);
+			@include text-style(16, $primary);
+			width: 100%;
+			height: 44px;
+			padding: 0 8px;
+			border-radius: 2px;
+
+			&:hover {
+				background-color: $background;
+			}
+		}
+	}
 }

@@ -1,77 +1,77 @@
 %form-base {
-    @include text-style(16, $primary);
-    display: block;
-    width: 100%;
-    height: 40px;
-    padding: 0 16px;
-    background-color: $white;
-    border: 1px solid $border;
-    border-radius: 4px;
-    appearance: none;
-    transition: background-color 200ms ease-in-out;
+	@include text-style(16, $primary);
+	display: block;
+	width: 100%;
+	height: 40px;
+	padding: 0 16px;
+	background-color: $white;
+	border: 1px solid $border;
+	border-radius: 4px;
+	appearance: none;
+	transition: background-color 200ms ease-in-out;
 
-    &::placeholder {
-        color: $tertiary
-    }
+	&::placeholder {
+		color: $tertiary
+	}
 
-    &:not(:disabled):hover {
-        background-color: $background;
-    }
+	&:not(:disabled):hover {
+		background-color: $background;
+	}
 
-    &:disabled {
-        opacity: 0.4;
-        cursor: not-allowed
-    }
+	&:disabled {
+		opacity: 0.4;
+		cursor: not-allowed
+	}
 }
 
 .form-select,
 .form-input {
-    @extend %form-base;
+	@extend %form-base;
 }
 
 //NOTE: Select
 .select-group {
-    position: relative;
+	position: relative;
 
-    &.is-active {
-        .form-select {
-            border-color: $blue;
-        }
+	&.is-active {
+		.form-select {
+			border-color: $blue;
+		}
 
-        .ic-caret {
-            color: $blue;
-        }
-    }
+		.ic-caret {
+			color: $blue;
+		}
+	}
 
-    .form-select {
-        padding-right: 40px;
-        text-overflow: ellipsis;
-    }
+	.form-select {
+		padding-right: 40px;
+		text-overflow: ellipsis;
+	}
 
-    .ic-caret {
-        @include pos-center-y;
-        right: 8px;
-        font-size: 24px;
-        color: $tertiary;
-        pointer-events: none;
-    }
+	.ic-caret {
+		@include pos-center-y;
+		right: 8px;
+		font-size: 24px;
+		color: $tertiary;
+		pointer-events: none;
+	}
 }
 
 //NOTE: input
 
 .input-group {
-    position: relative;
+	position: relative;
 
 
-    .ic-search {
-        @include pos-center-y;
-        left: 10px;
-        font-size: 20px;
-        color: $secondary;
-        pointer-events: none;
-    }
+	.ic-search {
+		@include pos-center-y;
+		left: 10px;
+		font-size: 20px;
+		color: $secondary;
+		pointer-events: none;
+	}
 
-    .form-input {
-        padding: 0 40px;
-    }
+	.form-input {
+		padding: 0 40px;
+	}
 }
