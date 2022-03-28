@@ -1,0 +1,107 @@
+.drawer-menu {
+	$drawer-height: 36px;
+	$commnunity-lenght: 9;
+	$store-lenght: 10;
+	$expert-lenght: 5;
+	$drawer-bottom-padding: 8px;
+
+	@function _calculate-max-height($lenght) {
+		@return ($drawer-height * $lenght) + $drawer-bottom-padding;
+	}
+
+	&.is-active {
+
+		.drawer-menu-button {
+			color: $blue;
+		}
+	}
+
+	&.is-open {
+
+		&.is-community {
+			.drawer-menu-content {
+				max-height: _calculate-max-height($commnunity-lenght);
+			}
+		}
+
+		&.is-store {
+			.drawer-menu-content {
+				max-height: _calculate-max-height($store-lenght);
+			}
+		}
+
+		&.is-expert {
+			.drawer-menu-content {
+				max-height: _calculate-max-height($expert-lenght);
+			}
+		}
+
+		.drawer-menu-button .ic-chevron {
+			transform: translateY(-50%) rotate(180deg);
+		}
+
+		.drawer-menu-list {
+			padding-bottom: 8px;
+		}
+	}
+
+	&-button {
+
+		@include flexbox(start);
+		@include text-style(18, $primary);
+		width: 100%;
+		height: 54px;
+		position: relative;
+		padding: 0 8px;
+		transition: color 200ms ease-in-out;
+
+		i {
+			&:first-child {
+				position: relative; //TODO: 아이콘 높낮이 
+				top: 1px; //TODO:
+				margin-right: 8px;
+				font-size: 24px;
+				color: $primary;
+
+			}
+
+			&:last-child {
+				@include pos-center-y;
+				right: 8px;
+				font-size: 16px;
+				color: $primary;
+				transition: transform 200ms ease-in-out;
+			}
+		}
+	}
+
+	&-content {
+
+		transition: max-height 200ms ease-in-out;
+		max-height: 0;
+		overflow: hidden;
+
+	}
+
+	&-item {
+		&.is-active {
+			a {
+				color: $blue;
+			}
+		}
+
+		a {
+			@include text-style(14, $primary);
+			@include flexbox(start);
+			font-weight: 700;
+			width: 100%;
+			height: $drawer-height;
+			padding: 0 12px;
+		}
+
+		.ic-new {
+			font-size: 16px;
+			color: $red;
+		}
+	}
+}
