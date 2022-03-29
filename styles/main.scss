@@ -2,6 +2,7 @@
 @import './constants/typography';
 @import './constants/breakpoint';
 @import './constants/box-shadow';
+@import './constants/z-indexes';
 
 @import './base/fonts';
 @import './base/nomalize';
@@ -26,6 +27,8 @@
 @import './components/gnb-icon-buttons';
 @import './components/my-menu';
 @import './components/drawer-menu';
+
 @import './layouts/grids';
 @import './layouts/gnb';
-@import './layouts/sidebar'
+@import './layouts/sidebar';
+@import './layouts/overlay';
