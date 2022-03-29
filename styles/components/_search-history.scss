@@ -16,7 +16,10 @@
   &-item {
     position: relative;
     @include flexbox(between);
-
+    &:hover {
+      background-color: $background;
+      border-radius: 2px;
+    }
     .search-word {
 
       @include text-style(16, $primary);
@@ -24,7 +27,9 @@
       text-align: left;
       font-weight: 400;
       padding: 10px $close-btn-size 10px 8px;
+      
 
+      
 
     }
 
@@ -35,12 +40,11 @@
       top: 6px;
       width: $close-btn-size;
       height: $close-btn-size;
+      font-size: 16px;
+      color: $tertiary;
 
-
-      i {
-
-        font-size: 16px;
-        color: $tertiary;
+      &:hover{
+        color: $primary;
       }
     }
   }
