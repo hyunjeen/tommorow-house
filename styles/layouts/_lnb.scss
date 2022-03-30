@@ -1,0 +1,43 @@
+
+.lnb {
+
+  $lnb-link-padding: 8px;
+  $grid-margin: $sm-margin + $gutter / 2;
+  overflow-x: auto;
+  
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  &-list {
+    @include inline-flexbox(start);
+    margin-left: -#{$grid-margin};
+    padding: 0 #{$grid-margin - $lnb-link-padding};
+    white-space: nowrap;
+    height: 40px;
+    border-bottom: 1px solid $border;
+  }
+
+  &-item {
+
+    &.is-active {
+
+      a {
+        color: $blue;
+        border-bottom-color:  $blue;
+        
+      }
+    }
+
+    a {
+      @include inline-flexbox;
+      @include text-style(13, $dark);
+      padding: 0 8px;
+      height: 40px;
+      font-weight: 700;      
+      border-bottom: 2px solid transparent;
+    }    
+
+  }
+}
