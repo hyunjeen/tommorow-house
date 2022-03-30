@@ -6,7 +6,7 @@
 	$drawer-bottom-padding: 20px;
 
 	@function _calculate-max-height($lenght) {
-		@return ($drawer-height * $lenght) + $drawer-bottom-padding;
+		@return ($drawer-height * $lenght)+$drawer-bottom-padding;
 	}
 
 	&.is-active {
@@ -101,7 +101,7 @@
 
 		.ic-new {
 			font-size: 16px;
-			color: $red;
+
 		}
 	}
 }

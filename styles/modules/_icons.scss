@@ -56,8 +56,9 @@ i {
 	content: "\e90a";
 }
 
-.ic-new:before {
+.ic-new:before {	
 	content: "\e90b";
+	color: $red;
 }
 
 .ic-search:before {
