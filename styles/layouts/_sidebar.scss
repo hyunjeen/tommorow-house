@@ -109,10 +109,7 @@
 		}
 	}
 
-	&::-webkit-scrollbar{
-		display: none; 
-		
-	}
+	@include no-scrollbar;
 
 
 }
