@@ -1,19 +1,20 @@
-
 .lnb {
-
+  $lnb-height-sm : 40px;
+  $lnb-height-md : 50px;
   $lnb-link-padding: 8px;
   $grid-margin: $sm-margin + $gutter / 2;
   overflow-x: auto;
-  
+
   @include no-scrollbar;
-  
+
 
   &-list {
     @include inline-flexbox(start);
+    width: 100vw;
     margin-left: -#{$grid-margin};
     padding: 0 #{$grid-margin - $lnb-link-padding};
     white-space: nowrap;
-    height: 40px;
+    height: $lnb-height-sm;
     border-bottom: 1px solid $border;
   }
 
@@ -23,8 +24,8 @@
 
       a {
         color: $blue;
-        border-bottom-color:  $blue;
-        
+        border-bottom-color: $blue;
+
       }
     }
 
@@ -32,10 +33,30 @@
       @include inline-flexbox;
       @include text-style(13, $dark);
       padding: 0 8px;
-      height: 40px;
-      font-weight: 700;      
+      height: $lnb-height-sm;
+      font-weight: 700;
       border-bottom: 2px solid transparent;
-    }    
 
+      &:hover {
+        color: $blue;
+      }
+    }
+
+  }
+
+  @include responsive(T) {
+
+    &-list {
+      height: $lnb-height-md;
+      margin-left: 0;
+      padding: 0;
+      border-bottom: 0;
+      
+    }
+
+    a {
+      @include text-style(14);
+      height: $lnb-height-md;
+    }
   }
 }
