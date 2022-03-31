@@ -1,31 +1,39 @@
 .lnb {
-
   $lnb-link-padding: 8px;
-  $grid-margin: $sm-margin + $gutter / 2;
+  $grid-margin: $sm-margin + $gutter / 2;  
   overflow-x: auto;
+  @include no-scrollbar;   
   background-color: $white;
-
-  @include no-scrollbar;
-
+  border-bottom: 1px solid $border;  
 
   &-list {
-    @include inline-flexbox(start);
-    width: 100vw;
+    @include inline-flexbox(start);    
     margin-left: -#{$grid-margin};
     padding: 0 #{$grid-margin - $lnb-link-padding};
-    white-space: nowrap;
     height: $lnb-height-sm;
-    border-bottom: 1px solid $border;
+    white-space: nowrap;
+    
   }
 
   &-item {
-
     &.is-active {
 
       a {
-        color: $blue;
-        border-bottom-color: $blue;
+        color: $blue;        
+        position: relative;
+        
+      }
 
+      a::after{
+        content: "";
+        display: block;
+        position: absolute;        
+        width: 100%;
+        bottom: 0px;      
+        height: 2px;
+        background-color: $blue;
+        
+        
       }
     }
 
@@ -33,9 +41,9 @@
       @include inline-flexbox;
       @include text-style(13, $dark);
       padding: 0 8px;
-      height: $lnb-height-sm;
+      height: 50px;
       font-weight: 700;
-      border-bottom: 2px solid transparent;
+      height: $lnb-height-sm;
 
       &:hover {
         color: $blue;
@@ -47,14 +55,12 @@
   @include responsive(T) {
     overflow-x: visible;
     height: 50px;
-    border-bottom: 1px solid $border;
-
 
     &-list {
       height: $lnb-height-md;
       margin-left: 0;
       padding: 0;
-      border-bottom: 0;
+            
     }
 
     a {
