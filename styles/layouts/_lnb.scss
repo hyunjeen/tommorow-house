@@ -1,9 +1,9 @@
 .lnb {
-  $lnb-height-sm : 40px;
-  $lnb-height-md : 50px;
+
   $lnb-link-padding: 8px;
   $grid-margin: $sm-margin + $gutter / 2;
   overflow-x: auto;
+  background-color: $white;
 
   @include no-scrollbar;
 
@@ -45,13 +45,16 @@
   }
 
   @include responsive(T) {
+    overflow-x: visible;
+    height: 50px;
+    border-bottom: 1px solid $border;
+
 
     &-list {
       height: $lnb-height-md;
       margin-left: 0;
       padding: 0;
       border-bottom: 0;
-      
     }
 
     a {
