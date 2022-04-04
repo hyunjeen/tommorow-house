@@ -49,7 +49,7 @@
   }
 
   @include responsive(T) {
-    padding-right: 30px;  
+    padding-right: 30px;
 
     &-slider {
       margin: 0 0 8px 0;
@@ -67,12 +67,12 @@
     }
 
     .thumbnail-item {
-      margin: 0;
-      
-      &:not(:last-child){
+      margin: 0px;
+
+      &:not(:last-child) {
         margin-right: 8px;
       }
-      
+
       button {
         width: 56px;
         height: 56px;
@@ -82,13 +82,13 @@
       }
 
       img {
-        display: block;        
+        display: block;
       }
 
       &.tns-nav-active {
-        button {  
-          @include flexbox;        
-          border: 2px solid $blue;  
+        button {
+          @include flexbox;
+          border: 2px solid $blue;
           transform: none;
 
         }
@@ -96,8 +96,55 @@
         img {
           width: 56px;
         }
-        
+
       }
+    }
+  }
+
+  @include responsive(D) {
+
+    @include flexbox(end, start);
+    
+    flex-direction: row-reverse;
+    
+
+    &-slider {
+      width: 500px;
+      height: 500px;
+    }
+
+    &-thumbnail{
+      margin-right: 8px;
+    }
+
+    .thumbnail-list {
+      @include column-flexbox;
+      justify-content: flex-start;
+    }
+
+    .thumbnail-item {   
+      margin-bottom: 8px;
+      
+
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+      
+      button,
+      img {
+        width: 75px;
+        height: 75px;
+      }
+
+      &.tns-nav-active {
+
+        img {
+          width: 75px;
+        }
+
+      }
+
+      
     }
   }
 }
