@@ -3,44 +3,41 @@
   position: relative;
 
   &-slider {
-
     margin: 0 -#{$grid-margin};
   }
 
   &-thumbnail {
     @include pos-center-x;
     bottom: 16px;
+  }
 
-    .thumbnail-list {
-      @include flexbox;
+  .thumbnail-list {
+    @include flexbox;
+  }
+
+  .thumbnail-item {
+    @include flexbox;
+    margin: 0 4px;
+
+    button {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $white;
+      opacity: .7;
+      transition: transform 100ms ease-in-out,
+        opacity 100ms ease-in-out;
     }
 
-    .thumbnail-item {
-      @include flexbox;
-      margin: 0 4px;
+    img {
+      display: none;
+    }
 
+    &.tns-nav-active {
       button {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background-color: $white;
-        opacity: .7;
-        transition: transform 100ms ease-in-out,
-        opacity 100ms ease-in-out;
+        opacity: 1;
+        transform: scale(1.33333);
       }
-
-      img {
-        display: none;
-        
-      }
-
-      &.tns-nav-active{
-        button{
-          opacity: 1;
-          transform: scale(1.33333);
-        }
-      }
-
     }
 
   }
@@ -49,5 +46,58 @@
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  @include responsive(T) {
+    padding-right: 30px;  
+
+    &-slider {
+      margin: 0 0 8px 0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    &-thumbnail {
+      position: static;
+      transform: none;
+    }
+
+    .thumbnail-list {
+      justify-content: flex-start;
+    }
+
+    .thumbnail-item {
+      margin: 0;
+      
+      &:not(:last-child){
+        margin-right: 8px;
+      }
+      
+      button {
+        width: 56px;
+        height: 56px;
+        border-radius: 4px;
+        overflow: hidden;
+        opacity: 1;
+      }
+
+      img {
+        display: block;        
+      }
+
+      &.tns-nav-active {
+        button {  
+          @include flexbox;        
+          border: 2px solid $blue;  
+          transform: none;
+
+        }
+
+        img {
+          width: 56px;
+        }
+        
+      }
+    }
   }
 }

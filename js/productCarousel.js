@@ -1,3 +1,4 @@
+const $carousel = document.querySelector(".product-carousel-slider");
 const slider = tns({
   container: '.product-carousel-slider .slider-list',
   controls: false,
@@ -8,13 +9,14 @@ const slider = tns({
   autoplayButtonOutput: false,
   mouseDrag: true,
   preventScrollOnTouch: true,
+  gutter: 1, 
 
 });
 
-document.querySelector(".product-carousel-slider").addEventListener('mouseover', (e) => {  
+$carousel.addEventListener('mouseover', (e) => {  
   slider.pause();
 })
 
-document.querySelector(".product-carousel-slider").addEventListener('mouseleave', (e) => {  
+$carousel.addEventListener('mouseleave', (e) => {  
   slider.play();
 })
