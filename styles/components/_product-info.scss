@@ -66,7 +66,6 @@
 
     .info-point {
 
-      @include flexbox(start);
       @include text-style(13, $secondary);
       font-weight: 400;
       margin-bottom: 16px;
