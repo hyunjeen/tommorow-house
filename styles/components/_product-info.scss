@@ -37,7 +37,7 @@
         @include inline-flexbox(start);
         font-size: 20px;
         font-weight: 700;
-        line-height: 24px;
+        height: 24px;
         color: $blue;
 
         .rate {
@@ -79,11 +79,51 @@
 
     span {
       @include flexbox(start);
-      @include text-style(16, $primary);      
+      @include text-style(16, $primary);
       font-weight: 400;
       line-height: 24px;
       margin-bottom: 2px;
     }
 
   }
+
+  @include responsive(T) {
+    padding: 0;
+
+    &-header {
+      margin-bottom: 2px;
+
+      .info-brand {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+
+      .info-title {
+        @include text-style(24);
+        margin-bottom: 8px;
+      }
+    }
+
+    &-price {
+      .info-original-price {
+      .discount-rate {
+        height: 36px;
+
+        .rate {
+
+          font-size: 44px;
+
+        }
+
+        .percent {
+
+          @include flexbox(start, end);
+          align-self: flex-end;
+        }
+      }
+    }
+    }
+  }
+
+
 }
