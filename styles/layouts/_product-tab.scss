@@ -4,7 +4,7 @@
   height: 40px;
   border-bottom: 1px solid $border;
   background-color: $white;
-  
+
 
   &-list {
     @include flexbox;
@@ -51,8 +51,12 @@
     border-bottom: 0;
     margin-top: 40px;
 
+    &-list {
+      margin: 0;
+    }
 
     &-item {
+
 
       button {
         height: 54px;
