@@ -1,0 +1,22 @@
+.product-spec {
+  padding-top: 20px;
+  .button-wrapper {
+  }
+
+  .product-table {
+    margin-top: 20px;
+  }
+
+  figure {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @include responsive(T) {
+    .product-table {
+      margin-top: 40px;
+    }
+  }
+}
