@@ -1,0 +1,22 @@
+.product-section {
+  padding-bottom: 20px;
+
+  &-divider {
+    margin: 0 -15px; //TODO: grid constant로 뺴기
+    height: 8px;
+    background-color: $border;
+  }
+  
+  @include responsive(T) {
+    width: 100%;
+    max-width: 692px;
+    padding-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include responsive(D){
+
+    margin-left: 0;
+  }
+}
