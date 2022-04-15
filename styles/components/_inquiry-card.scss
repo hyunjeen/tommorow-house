@@ -1,7 +1,8 @@
 .inquiry-card {
   padding-bottom: 40px;
+  
 
-  &-header {
+  &-header {    
     @include text-style(12);
     margin-bottom: 8px;
 
@@ -33,9 +34,11 @@
   }
 
   &-body {
-    .question-content {
-      @include text-style(13);
+    @include text-style(13);
+    
+    .question-content {      
       position: relative;
+      padding-left: 20px;
 
       span {
         position: absolute;
@@ -46,8 +49,14 @@
       }
 
       p {
+        @include flexbox(start);
         color: $primary;
-        padding-left: 20px;
+        
+        i {
+          margin-right: 8px;
+          font-size: 16px;
+          color: $tertiary;
+        }
       }
     }
   }
@@ -58,17 +67,16 @@
     }
 
     &-body {
+      @include text-style(14);
+      
       .question-content {
-        @include text-style(14);
+        padding-left: 24px;
 
         span {
           @include text-style(16);
-        }
-
-        p {
-          padding-left: 24px;
-        }
+        }       
       }
     }
   }
 }
+
