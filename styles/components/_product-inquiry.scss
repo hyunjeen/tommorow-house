@@ -10,13 +10,11 @@
     padding-bottom: 0;
 
     &.is-open {
-
       .product-section-header .text-button,
       .product-section-content {
         display: block;
         padding-bottom: 20px;
       }
-
       .product-section-header .icon-button {
         display: none;
       }
